@@ -1,0 +1,12 @@
+[package]
+name = "readme-cli"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "readme"
+path = "src/main.rs"
+
+[dependencies]
+readme-core = { path = "../readme-core" }

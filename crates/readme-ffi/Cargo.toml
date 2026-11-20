@@ -1,0 +1,21 @@
+[package]
+name = "readme-ffi"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+name = "readme_ffi"
+
+[dependencies]
+readme-core = { path = "../readme-core" }
+serde_json = "1"
+uniffi = { version = "0.28", features = ["cli"] }
+thiserror = "1"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+
